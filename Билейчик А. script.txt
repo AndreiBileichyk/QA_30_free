@@ -1,0 +1,43 @@
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+Запрос:
+curl http://162.55.220.72:5005/terminal-hw-request
+
+Ответ:
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   3936      0 --:--:-- --:--:-- --:--:--  3985{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+Запрос 2:
+curl http://162.55.220.72:5005/get_method?"name=Andrei&age=36"
+
+Ответ:
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    24  100    24    0     0    240      0 --:--:-- --:--:-- --:--:--   242[
+  "Andrei",
+  "36"
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+cd 30-QA
+mkdir script1 script2 script3
+cd script1
+touch sc1.txt sc2.txt sc3.txt sc4.json sc5.json
+mkdir s1 s2 s3 
+ls -la
+cd ../
+mv script1/{sc4.json,sc5.json} script2
+
